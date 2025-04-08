@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gymgenius_v1/features/authentication/screens/password_configuration/reset_password.dart';
+import 'package:gymgenius_v1/utils/constant/colors.dart';
 import 'package:gymgenius_v1/utils/constant/sizes.dart';
+import 'package:gymgenius_v1/utils/helpers/helper_functions.dart';
 import 'package:iconsax/iconsax.dart';
 
 class ForgetPassword extends StatelessWidget {
@@ -9,8 +11,15 @@ class ForgetPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final darkmode = KHelperFunctions.isDarkMode(context);
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () => Get.back(),
+          icon: Icon(Icons.arrow_back),
+          color: darkmode ? KColors.white : KColors.black,
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(KSizes.defaultSpace),
         child: Column(

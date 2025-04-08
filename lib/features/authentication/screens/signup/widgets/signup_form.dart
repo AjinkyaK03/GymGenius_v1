@@ -6,12 +6,8 @@ import 'package:gymgenius_v1/utils/constant/sizes.dart';
 import 'package:gymgenius_v1/utils/helpers/helper_functions.dart';
 import 'package:iconsax/iconsax.dart';
 
-
 class KSignupForm extends StatelessWidget {
-  const KSignupForm({
-    super.key,
-  });
-
+  const KSignupForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,42 +15,26 @@ class KSignupForm extends StatelessWidget {
     return Form(
       child: Column(
         children: [
-          /// First & Last Name
-          Row(
-            children: [
-              Expanded(
-                child: TextFormField(
-                  expands: false,
-                  decoration: const InputDecoration(
-                    labelText: "First Name",
-                    prefixIcon: Icon(Iconsax.user),
-                  ),
-                ),
-              ),
-              const SizedBox(width: KSizes.spaceBtwInputFields),
-              Expanded(
-                child: TextFormField(
-                  expands: false,
-                  decoration: const InputDecoration(
-                    labelText: "Last Name",
-                    prefixIcon: Icon(Iconsax.user),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: KSizes.spaceBtwInputFields),
-    
-          /// Username
+          /// First Name
           TextFormField(
             expands: false,
             decoration: const InputDecoration(
-              labelText: "Username",
+              labelText: "First Name",
               prefixIcon: Icon(Iconsax.user_edit),
             ),
           ),
           const SizedBox(height: KSizes.spaceBtwInputFields),
-    
+
+          /// Username
+          TextFormField(
+            expands: false,
+            decoration: const InputDecoration(
+              labelText: "Last Name",
+              prefixIcon: Icon(Iconsax.user_edit),
+            ),
+          ),
+          const SizedBox(height: KSizes.spaceBtwInputFields),
+
           /// Email,
           TextFormField(
             expands: false,
@@ -64,7 +44,7 @@ class KSignupForm extends StatelessWidget {
             ),
           ),
           const SizedBox(height: KSizes.spaceBtwInputFields),
-    
+
           /// Phone Number
           TextFormField(
             expands: false,
@@ -74,7 +54,7 @@ class KSignupForm extends StatelessWidget {
             ),
           ),
           const SizedBox(height: KSizes.spaceBtwInputFields),
-    
+
           /// Password
           TextFormField(
             obscureText: true,
@@ -85,13 +65,11 @@ class KSignupForm extends StatelessWidget {
             ),
           ),
           const SizedBox(height: KSizes.spaceBtwInputFields / 2),
-    
+
           /// Term and condition
           Row(
             children: [
-              SizedBox(
-                child: Checkbox(value: false, onChanged: (value) {}),
-              ),
+              SizedBox(child: Checkbox(value: false, onChanged: (value) {})),
               const SizedBox(width: KSizes.spaceBtwItems),
               Text.rich(
                 TextSpan(
@@ -102,13 +80,10 @@ class KSignupForm extends StatelessWidget {
                     ),
                     TextSpan(
                       text: 'Privacy Policy ',
-                      style: Theme.of(
-                        context,
-                      ).textTheme.bodyMedium?.apply(
+                      style: Theme.of(context).textTheme.bodyMedium?.apply(
                         color: dark ? KColors.white : KColors.primary,
                         decoration: TextDecoration.underline,
-                        decorationColor:
-                            dark ? KColors.white : KColors.primary,
+                        decorationColor: dark ? KColors.white : KColors.primary,
                       ),
                     ),
                     TextSpan(
@@ -117,13 +92,10 @@ class KSignupForm extends StatelessWidget {
                     ),
                     TextSpan(
                       text: 'Terms of use',
-                      style: Theme.of(
-                        context,
-                      ).textTheme.bodyMedium?.apply(
+                      style: Theme.of(context).textTheme.bodyMedium?.apply(
                         color: dark ? KColors.white : KColors.primary,
                         decoration: TextDecoration.underline,
-                        decorationColor:
-                            dark ? KColors.white : KColors.primary,
+                        decorationColor: dark ? KColors.white : KColors.primary,
                       ),
                     ),
                   ],
@@ -132,7 +104,7 @@ class KSignupForm extends StatelessWidget {
             ],
           ),
           const SizedBox(height: KSizes.spaceBtwSections),
-    
+
           /// Sign up Button
           SizedBox(
             width: double.infinity,

@@ -1,7 +1,7 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=E:\FlutterDev\flutter_windows_3.29.2-stable\flutter"
-export "FLUTTER_APPLICATION_PATH=E:\Ajinkya_Kadam\cursor_apps\FLUTTER\GymGenius\gymgenius_v1"
+export "FLUTTER_ROOT=C:\flutter\src\flutter"
+export "FLUTTER_APPLICATION_PATH=F:\AK\cursor_apps\FLUTTER\GymGenius\gymgenius_v1"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_TARGET=lib\main.dart"
 export "FLUTTER_BUILD_DIR=build"

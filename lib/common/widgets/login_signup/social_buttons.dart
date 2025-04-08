@@ -25,6 +25,7 @@ class KSocialButtons extends StatelessWidget {
             ),
           ),
         ),
+        const SizedBox(width: KSizes.spaceBtwItems),
         Container(
           decoration: BoxDecoration(
             border: Border.all(color: KColors.grey),

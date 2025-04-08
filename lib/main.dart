@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:gymgenius_v1/app.dart';
 import 'package:gymgenius_v1/features/authentication/screens/onboarding/onboarding.dart';
+import 'package:gymgenius_v1/navigation_menu.dart';
 import 'package:gymgenius_v1/utils/theme/theme.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:device_preview_plus/device_preview_plus.dart';
 
 void main() => runApp(
+  // App(),
   DevicePreview(
-    // enabled: !kReleaseMode,
     builder: (context) => MyApp(), // Wrap your app
   ),
 );
