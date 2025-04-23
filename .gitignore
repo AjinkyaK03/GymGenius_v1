@@ -1,0 +1,84 @@
+# Flutter specific
+build/
+.dart_tool/
+.packages
+.pub-cache/
+.flutter-plugins
+.flutter-plugins-dependencies
+.melos_tool/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+
+# iOS specific
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Runner/GeneratedPluginRegistrant.*
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Pods/
+ios/Runner.xcworkspace/
+
+# Android specific
+android/.gradle/
+android/app/*.keystore
+android/.gradle/
+android/app/build/
+android/app/intermediates/
+android/app/outputs/
+android/app/src/main/res/drawable-*
+android/local.properties
+android/.idea/
+*.iml
+
+# Web specific
+web/.dart_tool/
+web/.idea/
+
+# Windows specific
+windows/Runner/GeneratedPluginRegistrant.*
+
+# macOS specific
+macos/Flutter/GeneratedPluginRegistrant.swift
+macos/Flutter/ephemeral/
+
+# Linux specific
+linux/Flutter/GeneratedPluginRegistrant.*
+
+# Visual Studio Code
+.vscode/
+.idea/
+*.iml
+
+# Obsolete
+*.lock
+pubspec.lock
+
+# Firebase generated files
+firebase.json
+
+# Environment and Secret keys
+.env
+.env.*
+*.secret
+
+# Crashlytics and Fabric
+*.symbols
+
+# Other temp files
+*.log
+*.tmp
+*.DS_Store
+
+# Coverage
+coverage/
+
+# Assets generated folders
+assets/generated/
+
+# Generated localization files
+lib/generated/
