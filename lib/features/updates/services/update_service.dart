@@ -8,7 +8,9 @@ class UpdateService {
   static Future<UpdateInfoModel?> fetchLatestUpdate() async {
     try {
       final response = await http.get(
-        Uri.parse('https://api.github.com/repos/YOUR_USERNAME/gymgenius_v1/releases/latest'),
+        Uri.parse(
+          'https://api.github.com/repos/AjinkyaK03/GymGenius_v1/releases/latest',
+        ),
       );
 
       if (response.statusCode == 200) {

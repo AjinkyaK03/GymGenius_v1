@@ -21,10 +21,10 @@ android {
 
     defaultConfig {
         applicationId = "com.ak.gymgeniusv1"
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        minSdk = 21
+        targetSdk = 34
+        versionCode = 2
+        versionName = "1.0.1"
         ndkVersion = "27.0.12077973"
     }
 
@@ -40,3 +40,6 @@ android {
 flutter {
     source = "../.."
 }
+
+// Apply the Google services plugin
+apply(plugin = "com.google.gms.google-services")

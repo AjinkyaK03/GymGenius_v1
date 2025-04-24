@@ -9,7 +9,7 @@ class UpdateChecker {
     final info = await PackageInfo.fromPlatform();
     final localVersion = info.version;
 
-    final url = Uri.parse('https://api.github.com/repos/YOUR_USERNAME/gymgenius_v1/releases/latest');
+    final url = Uri.parse('https://api.github.com/repos/AjinkyaK03/GymGenius_v1/releases/latest');
     final response = await http.get(url);
 
     if (response.statusCode == 200) {

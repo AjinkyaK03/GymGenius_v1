@@ -19,9 +19,9 @@ The Ultimate AI-Powered Fitness Coach App — personalized, intelligent, and evo
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/gymgenius_v1.git
+git clone https://github.com/AjinkyaK03/GymGenius_v1.git
 
-cd gymgenius_v1
+cd GymGenius_v1
 ```
 
 ```
