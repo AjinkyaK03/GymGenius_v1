@@ -3,6 +3,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../models/update_info_model.dart';
+import '../../../common/logger.dart';
 
 class UpdateService {
   static Future<UpdateInfoModel?> fetchLatestUpdate() async {
@@ -24,7 +25,8 @@ class UpdateService {
         return null;
       }
     } catch (e) {
-      print('Error fetching GitHub update info: $e');
+      log.e("Error fetching GitHub update info", error: e);
+      // print('Error fetching GitHub update info: $e');
       return null;
     }
   }

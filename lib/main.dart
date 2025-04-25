@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:gymgenius_v1/common/update_checker.dart';
 import 'package:gymgenius_v1/common/widgets/bottom_nav_bar.dart';
 import 'package:gymgenius_v1/features/chat/screens/chat_page.dart';
 import 'package:gymgenius_v1/features/auth/controllers/auth_controller.dart';
@@ -11,8 +10,10 @@ import 'package:gymgenius_v1/features/auth/screens/forgot_password_screen.dart';
 import 'package:gymgenius_v1/features/plan/screens/workout_plan_screen.dart';
 import 'package:gymgenius_v1/features/profile/screens/profile_screen.dart';
 import 'package:gymgenius_v1/features/updates/controllers/update_controller.dart';
+import 'package:gymgenius_v1/features/workout_camera/screens/workout_camera_page.dart';
 import 'package:gymgenius_v1/features/workouts/screens/workout_library_screen.dart';
 import 'firebase_options.dart'; // Import the generated file
+import 'common/logger.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,7 +22,8 @@ void main() async {
       options: DefaultFirebaseOptions.currentPlatform,
     ); // Use the generated options
   } catch (e) {
-    print("Firebase initialization error: $e");
+    log.e("Error", error: e);
+    // print("Firebase initialization error: $e");
   }
   Get.put(AuthController());
   runApp(const GymGeniusApp());
@@ -46,6 +48,7 @@ class GymGeniusApp extends StatelessWidget {
         GetPage(name: '/chat', page: () => ChatPage()),
         GetPage(name: '/Workout', page: () => WorkoutLibraryScreen()),
         GetPage(name: '/plan', page: () => WorkoutPlanScreen()),
+        GetPage(name: '/camera', page: () => WorkoutCameraPage()),
       ],
     );
   }

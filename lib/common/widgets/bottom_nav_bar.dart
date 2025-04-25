@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gymgenius_v1/features/chat/screens/chat_page.dart';
 import 'package:gymgenius_v1/features/home/screens/home_page.dart';
+import 'package:gymgenius_v1/features/plan/screens/workout_plan_screen.dart';
 import 'package:gymgenius_v1/features/profile/screens/profile_screen.dart';
 
 class MainNavBar extends StatefulWidget {
@@ -16,6 +17,7 @@ class _MainNavBarState extends State<MainNavBar> {
   final List<Widget> _pages = [
     HomePage(),
     ChatPage(),
+    WorkoutPlanScreen(),
     ProfilePage(),
   ];
 
@@ -31,6 +33,7 @@ class _MainNavBarState extends State<MainNavBar> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.fitness_center), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Chat'),
+          BottomNavigationBarItem(icon: Icon(Icons.library_books), label: 'Plan'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
